@@ -1,0 +1,24 @@
+C:\Users\Sebastian\Desktop\Practic Mpp\Schelet_Server\Schelet_Server\bin\Debug\Schelet_Server.exe.config
+C:\Users\Sebastian\Desktop\Practic Mpp\Schelet_Server\Schelet_Server\bin\Debug\Schelet_Server.exe
+C:\Users\Sebastian\Desktop\Practic Mpp\Schelet_Server\Schelet_Server\bin\Debug\Schelet_Server.pdb
+C:\Users\Sebastian\Desktop\Practic Mpp\Schelet_Server\Schelet_Server\bin\Debug\EntityFramework.dll
+C:\Users\Sebastian\Desktop\Practic Mpp\Schelet_Server\Schelet_Server\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Sebastian\Desktop\Practic Mpp\Schelet_Server\Schelet_Server\bin\Debug\EntityFramework.xml
+C:\Users\Sebastian\Desktop\Practic Mpp\Schelet_Server\Schelet_Server\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Sebastian\Desktop\Practic Mpp\Schelet_Server\Schelet_Server\obj\Debug\Schelet_Server.csprojAssemblyReference.cache
+C:\Users\Sebastian\Desktop\Practic Mpp\Schelet_Server\Schelet_Server\obj\Debug\Schelet_Server.csproj.CoreCompileInputs.cache
+C:\Users\Sebastian\Desktop\Practic Mpp\Schelet_Server\Schelet_Server\obj\Debug\Schelet_Server.csproj.CopyComplete
+C:\Users\Sebastian\Desktop\Practic Mpp\Schelet_Server\Schelet_Server\obj\Debug\Schelet_Server.exe
+C:\Users\Sebastian\Desktop\Practic Mpp\Schelet_Server\Schelet_Server\obj\Debug\Schelet_Server.pdb
+C:\Users\Sebastian\Desktop\Practic Mpp\Subiect Adi\Schelet_Server\Schelet_Server\Schelet_Server\bin\Debug\Schelet_Server.exe.config
+C:\Users\Sebastian\Desktop\Practic Mpp\Subiect Adi\Schelet_Server\Schelet_Server\Schelet_Server\bin\Debug\Schelet_Server.exe
+C:\Users\Sebastian\Desktop\Practic Mpp\Subiect Adi\Schelet_Server\Schelet_Server\Schelet_Server\bin\Debug\Schelet_Server.pdb
+C:\Users\Sebastian\Desktop\Practic Mpp\Subiect Adi\Schelet_Server\Schelet_Server\Schelet_Server\bin\Debug\EntityFramework.dll
+C:\Users\Sebastian\Desktop\Practic Mpp\Subiect Adi\Schelet_Server\Schelet_Server\Schelet_Server\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Sebastian\Desktop\Practic Mpp\Subiect Adi\Schelet_Server\Schelet_Server\Schelet_Server\bin\Debug\EntityFramework.xml
+C:\Users\Sebastian\Desktop\Practic Mpp\Subiect Adi\Schelet_Server\Schelet_Server\Schelet_Server\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Sebastian\Desktop\Practic Mpp\Subiect Adi\Schelet_Server\Schelet_Server\Schelet_Server\obj\Debug\Schelet_Server.csprojAssemblyReference.cache
+C:\Users\Sebastian\Desktop\Practic Mpp\Subiect Adi\Schelet_Server\Schelet_Server\Schelet_Server\obj\Debug\Schelet_Server.csproj.CoreCompileInputs.cache
+C:\Users\Sebastian\Desktop\Practic Mpp\Subiect Adi\Schelet_Server\Schelet_Server\Schelet_Server\obj\Debug\Schelet_Server.csproj.CopyComplete
+C:\Users\Sebastian\Desktop\Practic Mpp\Subiect Adi\Schelet_Server\Schelet_Server\Schelet_Server\obj\Debug\Schelet_Server.exe
+C:\Users\Sebastian\Desktop\Practic Mpp\Subiect Adi\Schelet_Server\Schelet_Server\Schelet_Server\obj\Debug\Schelet_Server.pdb

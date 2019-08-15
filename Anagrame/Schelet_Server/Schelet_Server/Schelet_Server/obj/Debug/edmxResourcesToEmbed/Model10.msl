@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AnagrameModelStoreContainer" CdmEntityContainer="AnagrameEntities10">
+    <EntitySetMapping Name="Jocs">
+      <EntityTypeMapping TypeName="AnagrameModel.Joc">
+        <MappingFragment StoreEntitySet="Joc">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="castigator" ColumnName="castigator" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jucators">
+      <EntityTypeMapping TypeName="AnagrameModel.Jucator">
+        <MappingFragment StoreEntitySet="Jucator">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="username" ColumnName="username" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JucatorJocs">
+      <EntityTypeMapping TypeName="AnagrameModel.JucatorJoc">
+        <MappingFragment StoreEntitySet="JucatorJoc">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idJucator" ColumnName="idJucator" />
+          <ScalarProperty Name="idJoc" ColumnName="idJoc" />
+          <ScalarProperty Name="numarcuvinte" ColumnName="numarcuvinte" />
+          <ScalarProperty Name="cuvant1" ColumnName="cuvant1" />
+          <ScalarProperty Name="cuvant2" ColumnName="cuvant2" />
+          <ScalarProperty Name="cuvant3" ColumnName="cuvant3" />
+          <ScalarProperty Name="punctaj" ColumnName="punctaj" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="AnagrameModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

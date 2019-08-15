@@ -1,0 +1,74 @@
+﻿@model ServiciiRest.Models.tablerest
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tablerest</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.id_participant1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_participant1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.id_participant2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.id_participant2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.poztitie_barcuta1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.poztitie_barcuta1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.poztie_barcuta2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.poztie_barcuta2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numar_incercari_jucator1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numar_incercari_jucator1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numar_incercari_jucator2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numar_incercari_jucator2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.castigator_joc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.castigator_joc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

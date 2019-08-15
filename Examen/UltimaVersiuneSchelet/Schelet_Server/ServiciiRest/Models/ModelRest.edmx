@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ExamenModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tablerest">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_participant1" Type="int" />
+          <Property Name="id_participant2" Type="int" />
+          <Property Name="poztitie_barcuta1" Type="varchar" MaxLength="30" />
+          <Property Name="poztie_barcuta2" Type="varchar" MaxLength="30" />
+          <Property Name="numar_incercari_jucator1" Type="int" />
+          <Property Name="numar_incercari_jucator2" Type="int" />
+          <Property Name="castigator_joc" Type="int" />
+        </EntityType>
+        <EntityContainer Name="ExamenModelStoreContainer">
+          <EntitySet Name="tablerest" EntityType="Self.tablerest" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ExamenModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tablerest">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_participant1" Type="Int32" />
+          <Property Name="id_participant2" Type="Int32" />
+          <Property Name="poztitie_barcuta1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="poztie_barcuta2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="numar_incercari_jucator1" Type="Int32" />
+          <Property Name="numar_incercari_jucator2" Type="Int32" />
+          <Property Name="castigator_joc" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="ExamenEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tablerests" EntityType="Self.tablerest" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ExamenModelStoreContainer" CdmEntityContainer="ExamenEntities1">
+          <EntitySetMapping Name="tablerests">
+            <EntityTypeMapping TypeName="ExamenModel.tablerest">
+              <MappingFragment StoreEntitySet="tablerest">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="id_participant1" ColumnName="id_participant1" />
+                <ScalarProperty Name="id_participant2" ColumnName="id_participant2" />
+                <ScalarProperty Name="poztitie_barcuta1" ColumnName="poztitie_barcuta1" />
+                <ScalarProperty Name="poztie_barcuta2" ColumnName="poztie_barcuta2" />
+                <ScalarProperty Name="numar_incercari_jucator1" ColumnName="numar_incercari_jucator1" />
+                <ScalarProperty Name="numar_incercari_jucator2" ColumnName="numar_incercari_jucator2" />
+                <ScalarProperty Name="castigator_joc" ColumnName="castigator_joc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

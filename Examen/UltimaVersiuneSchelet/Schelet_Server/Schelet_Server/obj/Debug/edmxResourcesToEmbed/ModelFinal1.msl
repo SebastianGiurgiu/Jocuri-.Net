@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GhicesteCuvantModel1StoreContainer" CdmEntityContainer="GhicesteCuvantEntities">
+    <EntitySetMapping Name="Jocs">
+      <EntityTypeMapping TypeName="GhicesteCuvantModel1.Joc">
+        <MappingFragment StoreEntitySet="Joc">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="castigator" ColumnName="castigator" />
+          <ScalarProperty Name="punctecastigator" ColumnName="punctecastigator" />
+          <ScalarProperty Name="rand" ColumnName="rand" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JocJucators">
+      <EntityTypeMapping TypeName="GhicesteCuvantModel1.JocJucator">
+        <MappingFragment StoreEntitySet="JocJucator">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idjoc" ColumnName="idjoc" />
+          <ScalarProperty Name="idjucator" ColumnName="idjucator" />
+          <ScalarProperty Name="cuvant" ColumnName="cuvant" />
+          <ScalarProperty Name="mapare" ColumnName="mapare" />
+          <ScalarProperty Name="punctaj" ColumnName="punctaj" />
+          <ScalarProperty Name="literealese" ColumnName="literealese" />
+          <ScalarProperty Name="ales" ColumnName="ales" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jucators">
+      <EntityTypeMapping TypeName="GhicesteCuvantModel1.Jucator">
+        <MappingFragment StoreEntitySet="Jucator">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="GhicesteCuvantModel1.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RazboiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Joc">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="castigator" Type="Int32" />
+    <Property Name="carticastigator" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="listcartidisponibi" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="rand" Type="Int32" />
+    <NavigationProperty Name="JocJucators" Relationship="Self.FK__JocJucato__idjoc__5070F446" FromRole="Joc" ToRole="JocJucator" />
+  </EntityType>
+  <EntityType Name="JocJucator">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idjoc" Type="Int32" />
+    <Property Name="idjucator" Type="Int32" />
+    <Property Name="carte" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="casticastigate" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ales" Type="Int32" />
+    <NavigationProperty Name="Joc" Relationship="Self.FK__JocJucato__idjoc__5070F446" FromRole="JocJucator" ToRole="Joc" />
+    <NavigationProperty Name="Jucator" Relationship="Self.FK__JocJucato__idjuc__5165187F" FromRole="JocJucator" ToRole="Jucator" />
+  </EntityType>
+  <EntityType Name="Jucator">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="JocJucators" Relationship="Self.FK__JocJucato__idjuc__5165187F" FromRole="Jucator" ToRole="JocJucator" />
+    <NavigationProperty Name="User" Relationship="Self.FK__Jucator__usernam__4BAC3F29" FromRole="Jucator" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Jucators" Relationship="Self.FK__Jucator__usernam__4BAC3F29" FromRole="Users" ToRole="Jucator" />
+  </EntityType>
+  <Association Name="FK__JocJucato__idjoc__5070F446">
+    <End Role="Joc" Type="Self.Joc" Multiplicity="0..1" />
+    <End Role="JocJucator" Type="Self.JocJucator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Joc">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="JocJucator">
+        <PropertyRef Name="idjoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__JocJucato__idjuc__5165187F">
+    <End Role="Jucator" Type="Self.Jucator" Multiplicity="0..1" />
+    <End Role="JocJucator" Type="Self.JocJucator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Jucator">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="JocJucator">
+        <PropertyRef Name="idjucator" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Jucator__usernam__4BAC3F29">
+    <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Jucator" Type="Self.Jucator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="username" />
+      </Principal>
+      <Dependent Role="Jucator">
+        <PropertyRef Name="username" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="RazboiEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Jocs" EntityType="Self.Joc" />
+    <EntitySet Name="JocJucators" EntityType="Self.JocJucator" />
+    <EntitySet Name="Jucators" EntityType="Self.Jucator" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="FK__JocJucato__idjoc__5070F446" Association="Self.FK__JocJucato__idjoc__5070F446">
+      <End Role="Joc" EntitySet="Jocs" />
+      <End Role="JocJucator" EntitySet="JocJucators" />
+    </AssociationSet>
+    <AssociationSet Name="FK__JocJucato__idjuc__5165187F" Association="Self.FK__JocJucato__idjuc__5165187F">
+      <End Role="Jucator" EntitySet="Jucators" />
+      <End Role="JocJucator" EntitySet="JocJucators" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Jucator__usernam__4BAC3F29" Association="Self.FK__Jucator__usernam__4BAC3F29">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Jucator" EntitySet="Jucators" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

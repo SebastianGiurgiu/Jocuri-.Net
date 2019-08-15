@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ExamenModelStoreContainer" CdmEntityContainer="ExamenEntities1">
+    <EntitySetMapping Name="tablerests">
+      <EntityTypeMapping TypeName="ExamenModel.tablerest">
+        <MappingFragment StoreEntitySet="tablerest">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_participant1" ColumnName="id_participant1" />
+          <ScalarProperty Name="id_participant2" ColumnName="id_participant2" />
+          <ScalarProperty Name="poztitie_barcuta1" ColumnName="poztitie_barcuta1" />
+          <ScalarProperty Name="poztie_barcuta2" ColumnName="poztie_barcuta2" />
+          <ScalarProperty Name="numar_incercari_jucator1" ColumnName="numar_incercari_jucator1" />
+          <ScalarProperty Name="numar_incercari_jucator2" ColumnName="numar_incercari_jucator2" />
+          <ScalarProperty Name="castigator_joc" ColumnName="castigator_joc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

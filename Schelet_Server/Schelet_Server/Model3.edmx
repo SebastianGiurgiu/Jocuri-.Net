@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="JumpingModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Juriu">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="aspect" Type="varchar" MaxLength="30" />
+          <Property Name="username" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Participant">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="status" Type="varchar" MaxLength="30" />
+          <Property Name="lungime" Type="int" />
+          <Property Name="stil" Type="int" />
+          <Property Name="aterizare" Type="int" />
+        </EntityType>
+        <EntityType Name="PunctajPartcipant">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="lungime" Type="int" />
+          <Property Name="stil" Type="int" />
+          <Property Name="aterizare" Type="int" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="username" />
+          </Key>
+          <Property Name="username" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <Association Name="FK__Juriu__username__4BAC3F29">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Juriu" Type="Self.Juriu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="username" />
+            </Principal>
+            <Dependent Role="Juriu">
+              <PropertyRef Name="username" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PunctajPartc__id__5070F446">
+          <End Role="Participant" Type="Self.Participant" Multiplicity="1" />
+          <End Role="PunctajPartcipant" Type="Self.PunctajPartcipant" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Participant">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PunctajPartcipant">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="JumpingModel1StoreContainer">
+          <EntitySet Name="Juriu" EntityType="Self.Juriu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Participant" EntityType="Self.Participant" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PunctajPartcipant" EntityType="Self.PunctajPartcipant" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__Juriu__username__4BAC3F29" Association="Self.FK__Juriu__username__4BAC3F29">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Juriu" EntitySet="Juriu" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PunctajPartc__id__5070F446" Association="Self.FK__PunctajPartc__id__5070F446">
+            <End Role="Participant" EntitySet="Participant" />
+            <End Role="PunctajPartcipant" EntitySet="PunctajPartcipant" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="JumpingModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Juriu">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="aspect" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="username" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="User" Relationship="Self.FK__Juriu__username__4BAC3F29" FromRole="Juriu" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Participant">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="status" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="lungime" Type="Int32" />
+          <Property Name="stil" Type="Int32" />
+          <Property Name="aterizare" Type="Int32" />
+          <NavigationProperty Name="PunctajPartcipant" Relationship="Self.FK__PunctajPartc__id__5070F446" FromRole="Participant" ToRole="PunctajPartcipant" />
+        </EntityType>
+        <EntityType Name="PunctajPartcipant">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="lungime" Type="Int32" />
+          <Property Name="stil" Type="Int32" />
+          <Property Name="aterizare" Type="Int32" />
+          <NavigationProperty Name="Participant" Relationship="Self.FK__PunctajPartc__id__5070F446" FromRole="PunctajPartcipant" ToRole="Participant" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="username" />
+          </Key>
+          <Property Name="username" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Jurius" Relationship="Self.FK__Juriu__username__4BAC3F29" FromRole="Users" ToRole="Juriu" />
+        </EntityType>
+        <Association Name="FK__Juriu__username__4BAC3F29">
+          <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+          <End Role="Juriu" Type="Self.Juriu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="username" />
+            </Principal>
+            <Dependent Role="Juriu">
+              <PropertyRef Name="username" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PunctajPartc__id__5070F446">
+          <End Role="Participant" Type="Self.Participant" Multiplicity="1" />
+          <End Role="PunctajPartcipant" Type="Self.PunctajPartcipant" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Participant">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PunctajPartcipant">
+              <PropertyRef Name="id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="JumpingEntitiesCuPunctaj" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Jurius" EntityType="Self.Juriu" />
+          <EntitySet Name="Participants" EntityType="Self.Participant" />
+          <EntitySet Name="PunctajPartcipants" EntityType="Self.PunctajPartcipant" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <AssociationSet Name="FK__Juriu__username__4BAC3F29" Association="Self.FK__Juriu__username__4BAC3F29">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Juriu" EntitySet="Jurius" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PunctajPartc__id__5070F446" Association="Self.FK__PunctajPartc__id__5070F446">
+            <End Role="Participant" EntitySet="Participants" />
+            <End Role="PunctajPartcipant" EntitySet="PunctajPartcipants" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="JumpingModel1StoreContainer" CdmEntityContainer="JumpingEntitiesCuPunctaj">
+          <EntitySetMapping Name="Jurius">
+            <EntityTypeMapping TypeName="JumpingModel1.Juriu">
+              <MappingFragment StoreEntitySet="Juriu">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="aspect" ColumnName="aspect" />
+                <ScalarProperty Name="username" ColumnName="username" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Participants">
+            <EntityTypeMapping TypeName="JumpingModel1.Participant">
+              <MappingFragment StoreEntitySet="Participant">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="lungime" ColumnName="lungime" />
+                <ScalarProperty Name="stil" ColumnName="stil" />
+                <ScalarProperty Name="aterizare" ColumnName="aterizare" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PunctajPartcipants">
+            <EntityTypeMapping TypeName="JumpingModel1.PunctajPartcipant">
+              <MappingFragment StoreEntitySet="PunctajPartcipant">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="lungime" ColumnName="lungime" />
+                <ScalarProperty Name="stil" ColumnName="stil" />
+                <ScalarProperty Name="aterizare" ColumnName="aterizare" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="JumpingModel1.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

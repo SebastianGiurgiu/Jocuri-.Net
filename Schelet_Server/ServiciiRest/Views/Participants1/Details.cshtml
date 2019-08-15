@@ -1,0 +1,50 @@
+﻿@model ServiciiRest.Models.Participant
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Participant</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lungime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lungime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.stil)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stil)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.aterizare)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.aterizare)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

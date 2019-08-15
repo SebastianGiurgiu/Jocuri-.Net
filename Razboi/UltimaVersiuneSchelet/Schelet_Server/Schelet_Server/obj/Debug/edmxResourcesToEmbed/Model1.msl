@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RazboiModelStoreContainer" CdmEntityContainer="RazboiEntities">
+    <EntitySetMapping Name="Jocs">
+      <EntityTypeMapping TypeName="RazboiModel.Joc">
+        <MappingFragment StoreEntitySet="Joc">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="castigator" ColumnName="castigator" />
+          <ScalarProperty Name="carticastigator" ColumnName="carticastigator" />
+          <ScalarProperty Name="listcartidisponibi" ColumnName="listcartidisponibi" />
+          <ScalarProperty Name="rand" ColumnName="rand" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JocJucators">
+      <EntityTypeMapping TypeName="RazboiModel.JocJucator">
+        <MappingFragment StoreEntitySet="JocJucator">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idjoc" ColumnName="idjoc" />
+          <ScalarProperty Name="idjucator" ColumnName="idjucator" />
+          <ScalarProperty Name="carte" ColumnName="carte" />
+          <ScalarProperty Name="casticastigate" ColumnName="casticastigate" />
+          <ScalarProperty Name="ales" ColumnName="ales" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jucators">
+      <EntityTypeMapping TypeName="RazboiModel.Jucator">
+        <MappingFragment StoreEntitySet="Jucator">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="RazboiModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ServiciiRest.Models.tablerest>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id_participant1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.id_participant2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.poztitie_barcuta1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.poztie_barcuta2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numar_incercari_jucator1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numar_incercari_jucator2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.castigator_joc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_participant1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.id_participant2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.poztitie_barcuta1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.poztie_barcuta2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numar_incercari_jucator1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numar_incercari_jucator2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.castigator_joc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

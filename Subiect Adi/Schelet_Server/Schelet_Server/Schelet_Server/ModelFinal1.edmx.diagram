@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9a56e400b6a74528a2e15fc33060c160" Name="Diagram1">
+        <EntityTypeShape EntityType="GhicesteCuvantModel1.Joc" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GhicesteCuvantModel1.JocJucator" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="GhicesteCuvantModel1.Jucator" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GhicesteCuvantModel1.User" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <AssociationConnector Association="GhicesteCuvantModel1.FK__JocJucato__idjoc__6C190EBB" ManuallyRouted="false" />
+        <AssociationConnector Association="GhicesteCuvantModel1.FK__JocJucato__idjuc__6D0D32F4" ManuallyRouted="false" />
+        <AssociationConnector Association="GhicesteCuvantModel1.FK__Jucator__usernam__4BAC3F29" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

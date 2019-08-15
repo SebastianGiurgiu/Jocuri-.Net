@@ -1,0 +1,80 @@
+﻿@model ServiciiRest.Models.JocJucator
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>JocJucator</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idjoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idjoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idjucator)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idjucator)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cuvant)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cuvant)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mapare)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mapare)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.punctaj)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.punctaj)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.literealese)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.literealese)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ales)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ales)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

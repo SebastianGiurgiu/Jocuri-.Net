@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ServiciiRest.Models.JocJucator>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idjoc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idjucator)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cuvant)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.mapare)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.punctaj)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.literealese)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ales)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idjoc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idjucator)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cuvant)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mapare)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.punctaj)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.literealese)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ales)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

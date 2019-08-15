@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GhicesteCuvantModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="JocJucator">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idjoc" Type="Int32" />
+    <Property Name="idjucator" Type="Int32" />
+    <Property Name="cuvant" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="mapare" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="punctaj" Type="Int32" />
+    <Property Name="literealese" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ales" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="GhicesteCuvantEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="JocJucators" EntityType="Self.JocJucator" />
+  </EntityContainer>
+</Schema>

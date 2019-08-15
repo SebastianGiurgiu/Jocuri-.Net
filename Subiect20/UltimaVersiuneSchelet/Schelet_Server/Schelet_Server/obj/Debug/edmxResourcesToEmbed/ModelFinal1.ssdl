@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GhicesteCuvantModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Joc">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="castigator" Type="int" />
+    <Property Name="punctecastigator" Type="int" />
+    <Property Name="rand" Type="int" />
+  </EntityType>
+  <EntityType Name="JocJucator">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idjoc" Type="int" />
+    <Property Name="idjucator" Type="int" />
+    <Property Name="cuvant" Type="varchar" MaxLength="30" />
+    <Property Name="mapare" Type="varchar" MaxLength="30" />
+    <Property Name="punctaj" Type="int" />
+    <Property Name="literealese" Type="varchar" MaxLength="30" />
+    <Property Name="ales" Type="int" />
+  </EntityType>
+  <EntityType Name="Jucator">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="username" />
+    </Key>
+    <Property Name="username" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <Association Name="FK__JocJucato__idjoc__6C190EBB">
+    <End Role="Joc" Type="Self.Joc" Multiplicity="0..1" />
+    <End Role="JocJucator" Type="Self.JocJucator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Joc">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="JocJucator">
+        <PropertyRef Name="idjoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__JocJucato__idjuc__6D0D32F4">
+    <End Role="Jucator" Type="Self.Jucator" Multiplicity="0..1" />
+    <End Role="JocJucator" Type="Self.JocJucator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Jucator">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="JocJucator">
+        <PropertyRef Name="idjucator" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Jucator__usernam__4BAC3F29">
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <End Role="Jucator" Type="Self.Jucator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="username" />
+      </Principal>
+      <Dependent Role="Jucator">
+        <PropertyRef Name="username" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GhicesteCuvantModel1StoreContainer">
+    <EntitySet Name="Joc" EntityType="Self.Joc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JocJucator" EntityType="Self.JocJucator" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Jucator" EntityType="Self.Jucator" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__JocJucato__idjoc__6C190EBB" Association="Self.FK__JocJucato__idjoc__6C190EBB">
+      <End Role="Joc" EntitySet="Joc" />
+      <End Role="JocJucator" EntitySet="JocJucator" />
+    </AssociationSet>
+    <AssociationSet Name="FK__JocJucato__idjuc__6D0D32F4" Association="Self.FK__JocJucato__idjuc__6D0D32F4">
+      <End Role="Jucator" EntitySet="Jucator" />
+      <End Role="JocJucator" EntitySet="JocJucator" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Jucator__usernam__4BAC3F29" Association="Self.FK__Jucator__usernam__4BAC3F29">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Jucator" EntitySet="Jucator" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

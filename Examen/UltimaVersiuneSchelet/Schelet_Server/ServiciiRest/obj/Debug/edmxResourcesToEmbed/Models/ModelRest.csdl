@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ExamenModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tablerest">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_participant1" Type="Int32" />
+    <Property Name="id_participant2" Type="Int32" />
+    <Property Name="poztitie_barcuta1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="poztie_barcuta2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="numar_incercari_jucator1" Type="Int32" />
+    <Property Name="numar_incercari_jucator2" Type="Int32" />
+    <Property Name="castigator_joc" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="ExamenEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tablerests" EntityType="Self.tablerest" />
+  </EntityContainer>
+</Schema>

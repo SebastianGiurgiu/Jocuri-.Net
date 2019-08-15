@@ -1,0 +1,74 @@
+﻿@model ServiciiRest.Models.JocJucator
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>JocJucator</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idjoc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idjoc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idjucator)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idjucator)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cuvant)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cuvant)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.mapare)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mapare)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.punctaj)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.punctaj)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.literealese)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.literealese)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ales)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ales)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

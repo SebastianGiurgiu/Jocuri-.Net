@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JumpingModelStoreContainer" CdmEntityContainer="JumpingEntities">
+    <EntitySetMapping Name="Jurius">
+      <EntityTypeMapping TypeName="JumpingModel.Juriu">
+        <MappingFragment StoreEntitySet="Juriu">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="aspect" ColumnName="aspect" />
+          <ScalarProperty Name="username" ColumnName="username" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Participants">
+      <EntityTypeMapping TypeName="JumpingModel.Participant">
+        <MappingFragment StoreEntitySet="Participant">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="lungime" ColumnName="lungime" />
+          <ScalarProperty Name="stil" ColumnName="stil" />
+          <ScalarProperty Name="aterizare" ColumnName="aterizare" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="JumpingModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
